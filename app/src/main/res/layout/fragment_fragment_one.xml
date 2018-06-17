@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="#3a3a3a"
+    tools:context="com.example.mohamed.record.FragmentOne"
+    tools:layout_editor_absoluteY="25dp">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+    </LinearLayout>
+
+    <com.gigamole.library.PulseView
+        android:id="@+id/pv"
+        android:layout_width="500dp"
+        android:layout_height="230dp"
+        app:pv_alpha="60"
+        app:pv_color="#b32525"
+        app:pv_icon="@drawable/mic"
+        app:pv_icon_height="100dp"
+        app:pv_icon_width="100dp"
+        app:pv_interpolator="@android:anim/linear_interpolator"
+        app:pv_measure="height"
+        app:pv_spawn_period="900" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pv"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/btn_Pause"
+        android:layout_width="100dp"
+
+
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_centerVertical="true"
+
+        android:background="@drawable/pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.614" />
+
+    <Button
+        android:id="@+id/btn_Record"
+        android:layout_width="100dp"
+
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_centerVertical="true"
+
+        android:background="@drawable/record"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.614" />
+
+    <Button
+        android:id="@+id/btn_Save"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/btn_Pause"
+        android:layout_marginTop="87dp"
+        android:layout_toEndOf="@+id/btn_Pause"
+        android:background="@drawable/save"
+        app:layout_constraintStart_toEndOf="@+id/btn_Record"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Record"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="364dp" />
+</RelativeLayout>
